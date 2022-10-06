@@ -1,1 +1,1 @@
-Here are my solutions for the final projects for the "Scientific Computing" certificate course from FreeCodeCamp.
+Here are my solutions for the final projects for some FreeCodeCamp courses as well as other FreeCodeCamp code prompts.
