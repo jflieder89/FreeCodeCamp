@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    @media (max-width: 300px) {
+  .header{
+  background-color: tan;
+    }
+    }
+    header {
+      background-color: crimson;
+      width: 98.95%;
+      position: fixed;
+      margin-top: -10px;
+      }
+    #welcome-text {
+      background-color: black;
+      padding-bottom: 20px;
+    }
+    #navbar-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0px;
+  overflow: hidden;
+    }
+    .navbar-list-item {
+      float: right;
+      margin: 15px;
+      font-size: 30px;
+      color: darkgreen;
+    }
+    #welcome-text {
+      padding-top: 60px;
+    }
+    #welcome-big {
+      text-align: center;
+      font-size: 50px;
+      color: white;
+    }
+    #welcome-small {
+      text-align: center;
+      font-size: 25px;
+      margin-top: -30px;
+      color: red;
+    }
+    #projects {
+      background-color: lightblue;
+      text-align: center;
+      margin-top: 0px;
+    }
+    .project-tile {
+      display: grid;
+      grid-template-columns: 25% 25% 25%;
+      justify-content: center;
+      row-gap: 50px;
+      column-gap: 50px;
+    }
+    .project {
+      font-size: 30px;
+    }
+    #contacts {
+      background-color: purple;
+      margin-top: -20px;
+      color: yellow;
+      text-align: center;
+    }
+    #contact-info {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 20% 20%;
+      justify-content: center;
+    }
+    
+  </style>
+  
+  <section id="welcome-section">
+  <header class="header">
+    <navbar id="navbar">
+      <ul id="navbar-list">
+        <li class="navbar-list-item"><a href=#contacts>Contact</a></li>
+        <li class="navbar-list-item"><a href=#projects>Projects</a></li>
+        <li class="navbar-list-item"><a href=#welcome-text>About</a></li> 
+      </ul>
+      </navbar>
+    </header>
+    
+    <section id="welcome-text">
+    <br><br><br><br><br><br><br><h1 id="welcome-big">Hi, I am a mimic of a mimic</h1>
+    <h4 id="welcome-small">Learning to be a programmer</h4><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </section>  
+  </section>
+  
+  <section id="projects">
+    <br><br><br><br><h2><u>Here is some of my content:</u></h2><br><br><br><br>
+    <div class="project-tile">
+      <p class="project"><a href="https://codepen.io/jflieder/pen/QWOPJNb" target="_blank">Product Page</a></p>
+      <p class="project"> <a href="https://codepen.io/jflieder/pen/yLPWPjV" target="_blank" >Survey Form</a></p>
+      <p class="project"><a href="https://codepen.io/jflieder/pen/QWOeZNM" target="_blank">Technical Page</a></p>
+      <p class="project"><a href="https://codepen.io/jflieder/pen/QWOPJNb" target="_blank">Tribute Page</a></p>
+      <p class="project"><a href="https://codepen.io/jflieder/pen/NWXPLqB" target="_blank">Portfolio</a></p>
+      <p class="project"><a id="profile-link" href="https://github.com/jflieder89/" target="_blank">My Github</a></p><br><br><br><br><br><br>
+      
+    </div>
+  </section>
+  
+  <section id="contacts">
+    <br><br><br><br><br><br><br><h2>Call me, beep me, if you need to reach me</h2><br><br><br><br><br>
+    <div id="contact-info">
+      <p>Phone: XXX-XXX-XXXX</p>
+      <p>Email: XXXXXX@XXXX.XXX</p>
+      
+    </div>
+    <br><br><br><br><br>
+  </section>
+  
+  
+  
+</html>

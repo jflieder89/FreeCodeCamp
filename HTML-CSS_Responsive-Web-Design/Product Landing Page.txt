@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    header {
+  --backup: darkred;
+} 
+@media (max-width: 3px) {
+  header{
+  --backup: gray;
+    }
+    }
+    main{
+      background-color: lightgray;
+    }
+    .logo {
+      float: left;
+      text-align: center;
+      color: white;
+    }
+    header {
+      background-color: var(--backup);
+      display: flex;
+      justify-content: space-between;
+      position: fixed;
+      width: 100%;
+      top: 0px;
+      z-index: 1;
+    }
+body{
+  margin-top: 200px;
+  background-color: lightgray;
+}
+    .nav-list {
+      list-style-type: none;
+      padding: 0;
+      overflow: hidden;
+    }
+    .nav-list-item {
+      display: block;
+      padding-top: 18px;
+      padding-right: 30px;
+      float: right; 
+}
+    .nav-list-item-anchor {
+      text-decoration: none;
+    }
+    #form {
+      text-align: center;
+    }
+    .feature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    margin: 0px 25%;
+    display: flex;
+    justify-content: left;
+    }
+    .feature-text {
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    }
+.feature-image {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.video-box {
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+.product_box {
+      display: grid;
+      grid-template-columns: 5% 250px 250px 250px 5%;
+      grid-column-gap: 50px;
+  justify-content: center;
+    }
+    .product {
+      text-align: center;
+      border: solid 2px black;
+    }
+    .product_name {
+      background-color: red;
+      justify-text: center;
+      margin-top: 0px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    footer {
+      background-color: lightgreen;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: 50px;
+    }
+    #footer_text{
+      text-align: center;
+    }
+    
+    
+  </style>
+ 
+  <main>
+    
+    <header id="header" class="header">
+      <figure id="header-img" class="logo">
+        <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcSp4RDS-wAeHP4Ytu-Amt1DLxGMCk6jfn3zDq0B_k1iJgb1jQs%26s&sp=1646920237T24f490db201255e192048d1bf01dea600ad972b3a98c43948676ceabf1836df5" alt="Logo" id="image" class="center" width="50" height="40">
+    <figcaption id="logo-caption">Mises Institute</figcaption>
+  </figure>
+      
+      <nav id="nav-bar">
+        <ul class="nav-list">
+  <li class="nav-list-item"><a href="#title" class="nav-list-item-anchor nav-link">Title</a></li>
+  <li class="nav-list-item"><a href="#email" class="nav-list-item-anchor nav-link">Email</a></li>
+  <li class="nav-list-item"><a href="#video" class="nav-list-item-anchor nav-link">Video</a></li>
+  <li class="nav-list-item"><a href="#feature-box" class="nav-list-item-anchor nav-link">Features</a></li>
+</ul> 
+      </nav>
+    </header>
+
+   <body>
+           
+     <div>
+       <h1 id="title" style="text-align: center;">Handcrafted, home-made economics</h1>
+       <form id="form" action="https://www.freecodecamp.com/email-submit">
+         <input id="email" type="email" placeholder="Enter your email address" required><br>
+         <button type="submit" id="submit">Get started</button><br><br><br><br>
+       </form>
+     </div>
+     
+     <div class="feature-box">
+       <div class="feature">
+       <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcQLbAvvBm93phbNplRfFRA9BR7D379NHEtc6sJmQ2BhT-mlmn0K%26s&sp=1646920286T8635ee3e04cc5796dbc95ee3bd9232828512099fbb648a0daa3f2a546d723a7d" alt="Rothbard face" class="feature-image" width="50" height="40">
+       <div>
+         <h3 class="feature-text">Premium theory</h3>
+         <h4 class="feature-text">Our theory has the shiniest origins which are sourced locally. This will increase the longevity of your purchase.</h4>
+     </div>
+     </div><br>
+       
+     <div class="feature">
+       <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcSEOPGCIg_LYkmxcaYjBotl4G2caLFFVj9xZkxfmSuT8kbUHxc%26s&sp=1646920354T1a77aff34f86614ab4e61069fe42cd0b11d3db00d90d1d8e24dda0bb7d46d7d5" alt="Mises face" class="feature-image" width="50" height="40">
+       <div>
+         <h3 class="feature-text">Fast Shipping</h3>
+         <h4 class="feature-text">Our Austrian economics books will ship to you so fast that your head will spin.</h4>
+       
+     </div>
+   </div><br>
+       
+   <div class="feature">
+       <img src="https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcSJHtCgZf7axUHPugV37LkAjsJAX8vEwIbz2kfywm4X3L2ftmBD%26s&sp=1646920405T6deae614dcffb36cf95c64316aa6d47ee554a8d68fe012184f1b8167cdabdeb6" alt="Hoppe face" class="feature-image" width="50" height="40">
+       <div>
+         <h3 class="feature-text">Quality Assurance</h3>
+         <h4 class="feature-text">You can be certain that our logic, economics, critiques, and alalyses are top-of-the-line.</h4>
+       
+     </div>
+   </div><br>
+   </div>
+     
+   <div class="video-box">
+     <video id="video" width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+    </video>
+   
+   </div>
+   <br><br><br><br><br>
+     
+   <div class="product_box">
+     
+     <div>
+       
+     </div>
+     
+     <div class="product">
+       <h5 class="product_name">First product</h5> 
+       <h4>$500</h4>
+       <p>It is good </p>
+       <p>Really, it's good</p>
+       <p>Seriously, it is super good</p>
+       <button type="submit">Purchase</button>
+     </div>
+   
+     <div class="product">
+          <h5 class="product_name">Second product</h5>
+       <h4>$700</h4>
+       <p>It is good </p>
+       <p>Really, it's good</p>
+       <p>Seriously, it is super good</p>
+       <button type="submit">Purchase</button>
+     </div>
+     
+     <div class="product">
+         <h5 class="product_name">Third product</h5> 
+       <h4>$1000</h4>
+       <p>It is good </p>
+       <p>Really, it's good</p>
+       <p>Seriously, it is super good</p>
+       <button type="submit">Purchase</button>
+     </div>
+     
+     <div>
+       
+     </div>
+     
+   </div>
+     
+   <footer>
+     <p id="footer_text">Copyright 2022, Super Duper Products</p>
+     
+   </footer>
+     
+   </body>
+    
+    
+    
+    </main>
+  
+  
+</html>

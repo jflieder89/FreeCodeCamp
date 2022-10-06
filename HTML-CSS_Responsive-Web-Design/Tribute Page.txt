@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+  
+<style>
+  h1 {
+    text-align: center;
+  }
+  h5 {
+    text-align: center;
+  }
+  body {
+    background-color: lightgray;
+  }
+  h1 {
+    margin: auto;
+  }
+  figure {
+    background-color: white;
+    border-color: white;
+    border-width: 5px;
+    border-style: solid;
+  }
+  figcaption {
+	text-align: center;
+}
+  img {
+    margin: auto;
+    display: block;
+  }
+  ul {
+    display: table; 
+    margin: 0 auto;
+    text-align: left;
+}
+  main{
+    text-align: center;
+  }
+</style>
+
+<body id="main">
+  
+<header id="title">
+  <h1>Dr. Norman Borlaug</h1>
+  <h5>The man who saved a billion lives</h5>
+</header>
+
+  <figure id="img-div">
+    <img src="https://www.freecatphotoapp.com/your-image.jpg" alt="A business cat wearing a necktie." id="image" class="center" width="500" height="400">
+    <figcaption id="img-caption">Business cat</figcaption>
+  </figure>
+ 
+  
+<main id="tribute-info">
+  <h3>Here is a bunch of text required to complete this tribute page:</h3>
+  <ul>
+  <li><strong>1492</strong> - Columbus sailed the ocean blue.</li>
+  <br>
+  <li><strong>1495</strong> - Columbus sailed the ocean green.</li>
+  <br>
+  <li><strong>1498</strong> - Columbus sailed the ocean purple.</li>
+  <br>
+  <li><strong>1499</strong> - Columbus sailed the ocean yellow.</li>
+  <br>
+  <li><strong>1500</strong> - Columbus sailed the ocean orange.</li>
+  <br>
+</ul>
+  <br>
+  <p><i>"Here is a wicked fancy quote from from smarty pants inspirational person."</i></p>
+  <p><i>--Here is the name of the smarty pants inspirational person</i></p>
+  <p> Here is a <a  href="https://mises.org/" target=_blank>fun site</a>
+  
+</main>
+ 
+</html>

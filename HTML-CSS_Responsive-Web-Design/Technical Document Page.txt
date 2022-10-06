@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    @media screen and (min-height: 450px) {
+      #navbar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  font-size: 30px;
+  margin-top: 0px;
+  padding-top: 0px;
+    }
+  
+}
+  
+    #navbar-header{
+      color: yellow;
+      font-size: 40px;
+    }
+    main{
+      margin-left: 270px;
+    }
+  </style>
+  
+  
+  <nav id="navbar">
+    <header id="navbar-header"><h4>My Technical Page</h4></header>
+    <p><a href="#introduction" class="nav-link">Introduction</a></p>
+    <p><a href="#html" class="nav-link">HTML</a></p>
+    <p><a href="#java" class="nav-link">Java</a></p>
+    <p><a href="#python" class="nav-link">Python</a></p>
+    <p><a href="#conclusion" class="nav-link">Conclusion</a></p>
+  </nav>
+  <main id="main-doc">
+    
+    <section class="main-section" id="introduction">
+      <header>
+        <h2>Introduction</h2>
+      </header>
+        <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+        <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+      <p><code>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</code><p>
+    </section>
+    
+    <section class="main-section" id="html">
+      <header>
+        <h2>HTML</h2>
+      </header>
+        <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+        <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+      <p><code>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</code><p>
+    </section>
+    
+    <section class="main-section" id="java">
+      <header>
+        <h2>Java</h2>
+      </header>
+        <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+        <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+        <ol>
+          <li>First stuff </li>
+          <li>Second stuff</li>
+          <li>Third stuff</li>
+          <li>Fourth stuff</li>
+          <li>Fifth stuff</li>
+        </ol>
+      <p><code>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</code><p>
+    </section>
+    
+    <section class="main-section" id="python">
+      <header>
+        <h2>Python</h2>
+      </header>
+        <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+        <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+      <p><code>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</code><p>
+    </section>
+    
+    <section class="main-section" id="conclusion">
+      <header>
+        <h2>Conclusion</h2>
+      </header>
+        <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+        <p>In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+      <p><code>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</code><p>
+    </section>
+    
+  </main>
+   
+</html>

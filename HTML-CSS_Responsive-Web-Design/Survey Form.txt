@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    main {
+      background-color: lightblue;
+    }
+      h1 {
+      text-align: center;
+    }
+    #description {
+      text-align: center;
+    }
+    header {
+      text-align: center;
+    }
+    form {
+      text-align: left;
+      background-color: darkblue;
+      margin: 0px 25%;
+      padding: 10px 20px;
+    }
+    input[type=text], input[type=email], input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+    .input-label, .dropdown {
+      font-size: 30px;
+      color: white;
+    }
+    
+  </style>
+  
+  <main>
+    <header>
+      <h1 id="title">freeCodeCamp Survey Form</h1>
+      <p id="description"><i>Thank you for taking the time to help us improve the platform</i></p>
+    </header>
+    
+    <form id="survey-form">
+      
+      <label id="name-label" class="input-label" for="name" style="color: white" style="font-size: 50px">Name</label>
+      <input id="name" type="text" placeholder="Enter your name" required>
+      <br>
+      
+      <label id="email-label" class="input-label" style="color: white" for="email">Email</label>
+      <input id="email-label" id="email" type="email" placeholder="Enter your email address" required>
+      <br>
+      
+      <label id="number-label" class="input-label" style="color: white" for="number">Age (optional)</label>
+      <input id="number" type="number" placeholder="Age" min="1" max="120"><br>
+      
+      <label id="dropdown" class="input-label" style="color: white">Which of the following is your favorite drummer?</label>      
+      <select name="drummers" id="dropdown">
+        <option disabled selected value> -- select favorite drummer -- </option>
+        <option value="brad_wilk">Brad Wilk</option>
+        <option value="neil_peart">Neil Peart</option>
+        <option value="buddy_rich">Buddy Rich</option>
+        <option value="carter_beauford">Carter Beauford</option>
+        <br>
+     </select>
+       
+          <p class="input-label">Which drum types are fun to hit? (check all that apply)</p>
+          <label for="snare" class="input-label"><input id="snare" value="snare" type="radio" name="drum-fun">Snare</label><br>
+          <label for="bass" class="input-label"><input id="bass" value="bass" type="radio" name="drum-fun">Bass</label><br>
+          <label for="crash" class="input-label"><input id="crash" value="crash" type="radio" name="drum-fun">Crash</label><br>
+          <label for="hi-hat" class="input-label"><input id="hi-hat" value="hi-hat" type="radio" name="drum-fun">Hi-hat</label><br>
+            <label for="ride" class="input-label"><input id="ride" value="ride" type="radio" name="drum-fun">Ride</label><br>
+          <label for="toms" class="input-label"><input id="toms" value="toms" type="radio" name="drum-fun">Toms</label><br>
+      
+      <p class="input-label">Which drum type is the most fun to hit?</p>
+       <label for="snare" class="input-label"><input id="snare" value="snare" type="checkbox" name="drum-best">Snare</label><br>
+      <label for="bass" class="input-label"><input id="bass" value="bass" type="checkbox" name="drum-best">Bass</label><br>
+      <label for="crash" class="input-label"><input id="crash" value="crash" type="checkbox" name="drum-best">Crash</label><br>
+      <label for="hi-hat" class="input-label"><input id="hi-hat" value="hi-hat" type="checkbox" name="drum-best">Hi-hat</label><br>
+      <label for="ride" class="input-label"><input id="ride" value="ride" type="checkbox" name="drum-best">Ride</label><br>
+      <label for="toms" class="input-label"><input id="toms" value="toms" type="checkbox" name="drum-best">Toms</label><br>
+      
+      <label for="comments" class="input-label" >Any comments or suggestions?</label>
+      <textarea id="comments" name="comments" style="width: 90%; max-width: 90%;"></textarea><br>
+      
+      <button type="submit">Submit</button>
+      
+                              
+    </form>
+  
+                              
+</main>
+ 
+</html>
