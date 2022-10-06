@@ -1,0 +1,70 @@
+function convertToRoman(num) {
+  let numInt = parseInt(num); //convert num from string to integer
+  let finalStr = ''; //create final string that will be returned
+  console.log('The inputted number is:', numInt);
+  
+  //first, add M to the final string for each thousand while subtracting 1000 from integer
+  while (numInt >= 1000) {
+    finalStr += 'M';
+    numInt -= 1000;
+  }
+  console.log('final string is after thousands:', finalStr);
+  console.log('remaining numInt:', numInt);
+
+  while (numInt >= 100) {
+    if (numInt >= 900) {
+      finalStr += 'CM';
+      numInt -= 900;
+    } else if (numInt >= 500) {
+        finalStr += 'D';
+        numInt -= 500;
+    } else if (numInt >= 400) {
+        finalStr += 'CD';
+        numInt -= 400;
+    } else if (numInt >= 100) {
+        finalStr += 'C';
+        numInt -= 100;
+    }
+  }
+  console.log('final string is after hundreds:', finalStr);
+  console.log('remaining numInt:', numInt);
+
+while (numInt >= 10) {
+    if (numInt >= 90) {
+      finalStr += 'XC';
+      numInt -= 90;
+    } else if (numInt >= 50) {
+        finalStr += 'L';
+        numInt -= 50;
+    } else if (numInt >= 40) {
+        finalStr += 'XL';
+        numInt -= 40;
+    } else if (numInt >= 10) {
+        finalStr += 'X';
+        numInt -= 10;
+    }
+  }
+  console.log('final string is after tens:', finalStr);
+  console.log('remaining numInt:', numInt);
+
+  while (numInt >= 1) {
+    if (numInt >= 9) {
+      finalStr += 'IX';
+      numInt -= 9;
+    } else if (numInt >= 5) {
+        finalStr += 'V';
+        numInt -= 5;
+    } else if (numInt >= 4) {
+        finalStr += 'IV';
+        numInt -= 4;
+    } else if (numInt >= 1) {
+        finalStr += 'I';
+        numInt -= 1;
+    }
+  }
+  console.log('final string is after ones:', finalStr);
+  console.log('remaining numInt:', numInt);
+  return finalStr;
+
+  }
+convertToRoman(2);

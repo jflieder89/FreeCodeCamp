@@ -1,0 +1,30 @@
+function telephoneCheck(str) {
+  //let tester = '555-555-5555';
+  //use ^ to specify checking if the string starts with the following regex
+  //use $ to specify checking if the string ends with the following regex
+  //console.log(/^\d\d\d-\d\d\d-\d\d\d\d$/.test(tester));
+
+  // !!remember to use the \ symbol directly in front of ( or ) to include it in a regex for searching so it is treated as a character and as part of a parenthesis pair!!
+  if (/^\d\d\d-\d\d\d-\d\d\d\d$/.test(str)) {
+    return true;
+  } else if (/^\(\d\d\d\)\d\d\d-\d\d\d\d$/.test(str)) {
+    return true;
+  } else if (/^\(\d\d\d\) \d\d\d-\d\d\d\d$/.test(str)) {
+    return true;
+  } else if (/^\d\d\d \d\d\d \d\d\d\d$/.test(str)) {
+    return true;
+  } else if (/^\d\d\d\d\d\d\d\d\d\d$/.test(str)) {
+    return true;
+  } else if (/^1 \d\d\d \d\d\d \d\d\d\d$/.test(str)) {
+    return true;
+  } else if (/^1 \d\d\d-\d\d\d-\d\d\d\d$/.test(str)) {
+    return true;
+  } else if (/^1 \(\d\d\d\) \d\d\d-\d\d\d\d$/.test(str)) {
+    return true;
+  } else if (/^1\(\d\d\d\)\d\d\d-\d\d\d\d$/.test(str)) {
+    return true;
+  }
+  return false;
+}
+
+console.log( 'final answer is: ', telephoneCheck("1 555 555 5555") );

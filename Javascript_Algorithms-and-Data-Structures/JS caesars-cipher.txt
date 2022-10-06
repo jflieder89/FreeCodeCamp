@@ -1,0 +1,38 @@
+function rot13(str) {
+  //First test out the charCodeAt method to go from string character to unicode code point:
+  //let test = 'abcd';
+  //console.log(.charCodeAt(1))
+  
+  //set a shift amount. In this case, I am prompted for 13:
+  let shiftAmount = 13;
+  //Next, create an empty array then fill it with the code points of the parameter string's characters plus 13:
+  let arrCodePoints = [];
+  for (let elem in str) {
+    //console.log(str[elem])
+    //console.log( /[A-Z]/.test(str[elem]) || /[a-z]/.test(str[elem]))
+    //console.log(str.charCodeAt(elem))
+    if ( /[A-Z]/.test(str[elem]) || /[a-z]/.test(str[elem]) ) { //if it is an alphabetic character:
+      //console.log(str.charCodeAt(elem))
+      arrCodePoints.push(str.charCodeAt(elem) - shiftAmount) //apply the shift and put it in the array
+      //Now account of if the shift pushes the code point out of the set of letters (moves it out of upper case when it started in upper case, or moves it out of lower case when it started in lower case)
+      if ( (arrCodePoints[elem] < 65 && str.charCodeAt(elem) >= 65) || (arrCodePoints[elem] < 97 && str.charCodeAt(elem) >= 97)){
+        arrCodePoints[elem] += 26;
+      }
+    } else { // if it is not an alphabetic character:
+      arrCodePoints.push(str.charCodeAt(elem)) //put it in the array without a shift
+    }
+  }
+  //console.log(arrCodePoints)
+  
+  
+  let finalStr = ''; //create a final string that will be returned with the shifted characters
+  for (let elem in arrCodePoints) {
+    //console.log(arrCodePoints[elem], String.fromCharCode(arrCodePoints[elem]));
+    let char = String.fromCharCode(arrCodePoints[elem]);
+    finalStr += char;
+  }
+  console.log(finalStr)
+  return finalStr;
+}
+
+rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT");

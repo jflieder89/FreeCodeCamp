@@ -1,0 +1,81 @@
+function checkCashRegister(price, cash, cid) {
+  let original_cid = cid.slice(); //make a copy of the original cid to in case I want to compare against any changes that are made later on
+  //console.log(original_cid);
+  let changeToMake = cash - price;
+  console.log('initial change to make:', changeToMake);
+
+  //first account for a scenario in which the customer pays with exact change:
+  if (price == cash) {
+    return {status: "OPEN", change: ['No change given']}
+  }
+
+  //now make an array with the relevant information of the cid to be iterated through for the change-making transactions. go highest to lowest
+  //form of [amountItIs, $amountRemaingingInIt, ["name", $amountAlreadyUsedAsChange] ]
+  let cidArr = [
+    [100, cid[8][1], ["HUNDRED", 0] ],
+    [20, cid[7][1], ["TWENTY", 0] ],
+    [10, cid[6][1], ["TEN", 0] ],
+    [5, cid[5][1], ["FIVE", 0] ],
+    [1, cid[4][1], ["ONE", 0] ],
+    [0.25, cid[3][1], ["QUARTER", 0] ],
+    [0.1, cid[2][1], ["DIME", 0] ],
+    [0.05, cid[1][1], ["NICKEL", 0] ],
+    [0.01, cid[0][1], ["PENNY", 0] ]
+  ];
+
+//for some reason, javascript has an issue where it is changing the changeToMake after a transaction to be slightly lower than it should. So, I'll implement a round function to make sure it is OK.
+
+  for (let i = 0; i < cidArr.length; i++) { // iterate through denominations in cidArr
+    if (changeToMake >= cidArr[i][0]) { //if changeToMake is greater than the currently iterated denomination
+      while (cidArr[i][1] > 0 && changeToMake >= cidArr[i][0]) {//while there are this amount of this denomination in the register and changeToMake remains at least this denomination, then take one of the register and apply it the the outstanding change:
+      //console.log(cidArr[i]);
+      //console.log('took a',  cidArr[i][2][0]);
+      //console.log(cidArr[i][1])
+      changeToMake -= cidArr[i][0]; //change the remaining change outstanding
+      changeToMake = Math.round(changeToMake * 100) / 100; //round it
+      //console.log('change remaining:',changeToMake);
+      cidArr[i][1] -= cidArr[i][0]; //transact out of the cidArray 1 amount of the denomination
+      cidArr[i][1] = Math.round(cidArr[i][1] * 100) / 100 //round it
+      //console.log(cidArr[i][1])
+      cidArr[i][2][1] += cidArr[i][0]; //add the denomination amount to the running tally of the amount of change contributed in that denomination
+      cidArr[i][2][1] = Math.round(cidArr[i][2][1] * 100) / 100 //round it
+      //console.log(cidArr[i]);
+      }
+    }
+  }
+
+  //now that all change that can be made has been made, account for the scenario that change could not be properly or fully made:
+  if (changeToMake != 0) {
+    return {status: "INSUFFICIENT_FUNDS", change: []};
+  }
+  //console.log(cidArr);
+  //now construct that remaining scenarios have made the correct change, construct the right return value. create status/change object to be edited to reflect the status of the register and the change given
+  let result = {
+    status: 0, 
+    change: []
+  };
+  //console.log(result)
+
+  //now determine if register is open (money remaining in the register) or closed (no money remaining in the register)
+  if ( (cidArr[0][1] == 0) && (cidArr[1][1] == 0) && (cidArr[2][1] == 0) && (cidArr[3][1] == 0) && (cidArr[4][1] == 0) && (cidArr[5][1] == 0) && (cidArr[6][1] == 0) && (cidArr[7][1] == 0) && (cidArr[8][1] == 0)) {
+    result['status'] = 'CLOSED';
+    result['change'] = [...original_cid]; // the problem prompts me to return the original cid as the change if the register ends up closed
+    return result;
+  } else {
+    result['status'] = 'OPEN';
+  }
+  //console.log(result)
+  
+  //now settle the change part of the result for the 'open' registers. add the last part of each array in cidArr if that denomination contributed to giving change:
+  for (let i = 0; i < cidArr.length; i++) {
+    if (cidArr[i][2][1] > 0 ) {
+      result['change'].push(cidArr[i][2]);
+    }
+  }
+  
+  return result;
+
+
+
+}
+console.log(checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]));

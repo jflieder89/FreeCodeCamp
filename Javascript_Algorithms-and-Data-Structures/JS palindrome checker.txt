@@ -1,0 +1,32 @@
+function palindrome(str) {
+  console.log('Original string: ', str);
+  str = str.toLowerCase(); //set all uppercase character to lowercase
+  console.log('Original to lowercase: ', str); // the originally inputted string to lower case
+  let arrAlNu = []; // create array to store just the alphanumeric elements of the original string
+  for (let elem in str) {
+    //console.log(str[elem], /\w/.test(str[elem])) //test to see if the character in the string is a word character (a-z, A-Z, 0-9, also _)
+    if ( /\w/.test(str[elem]) && str[elem] != '_' ) { //add character to the string if it is a word character AND it is not an underscore!!
+      arrAlNu.push(str[elem])
+    }
+  }
+  console.log('Only alphanumeric in array: ', arrAlNu) //print out the array of only alphanumeric characters to verify
+  let comparableStr = arrAlNu.join(''); //put original string's elements together with only alphanumeric characters kept, in the original order, with uppercase changed to lowercase
+  console.log('Original string for comparison: ', comparableStr)
+  
+  let strAlNuRev = '' //create string to add characters from array to in reverse order
+  for (let i = 0; arrAlNu.length > 0; i++) { //go until I've pop()'ed all characters in the array
+    var char = arrAlNu.pop(); //remove the last character in the array
+    //console.log('char :', char) 
+    strAlNuRev += char; //add that removed character to the next highest spot in the new string
+  }
+  console.log('Reversed alphanumeric string: ', strAlNuRev);
+  if (comparableStr === strAlNuRev) {
+    return true
+  } else {
+    return false
+  }
+  
+  
+}
+
+console.log(palindrome("99eye99"));
